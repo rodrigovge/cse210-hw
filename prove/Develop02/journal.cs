@@ -32,7 +32,7 @@ public class Journal {
 
     public void LoadFiles() {
         // Loading the questions
-        Tools objectHandler = new Tools ();
+        FileHandler objectHandler = new FileHandler ();
         //setting the read list to the local list
         _entries = objectHandler.ReadFile("What's the file's name to load?");
         // Confirmation message
@@ -42,7 +42,7 @@ public class Journal {
 
     public void SaveFiles(){
         //Setting list to save
-        Tools objectHandler = new Tools ();
+        FileHandler objectHandler = new FileHandler ();
         //Saving answers
         objectHandler.SaveFile("What's the file's name to save?",_entries);
         // Confirmation message

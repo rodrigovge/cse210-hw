@@ -8,7 +8,7 @@ public class Writer {
         List<string> questionsList  = new List<string>();
         string question;
         // Loading the questions
-        Tools objectHandler = new Tools ();
+        FileHandler objectHandler = new FileHandler ();
         questionsList = objectHandler.ReadQuestionaryFile();
         // Getting a random value from 0 to the size of the array +1 
         Random rnd = new Random();

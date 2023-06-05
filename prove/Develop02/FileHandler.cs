@@ -1,7 +1,7 @@
 using System;
 using System.IO; 
 
-public class Tools {
+public class FileHandler {
 
     private string _fileName;
 
