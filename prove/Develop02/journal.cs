@@ -1,10 +1,12 @@
 using System;
-public class Journal {
+public class Journal
+{
 
     public List<Entry> _entries = new List<Entry>();
-    
-    public void WriteEntry(){
-        
+
+    public void WriteEntry()
+    {
+
         // Generating random prompt
         Writer questionObject = new Writer();
         string question = questionObject.PromptGenerator();
@@ -23,36 +25,41 @@ public class Journal {
         Console.WriteLine();
     }
 
-    public void DisplayEntries(){
+    public void DisplayEntries()
+    {
         // initializing the object to handle the Responses TXT file
         Writer answerFileObject = new Writer();
         // reading the array
         answerFileObject.WriteEntries(_entries);
     }
 
-    public void LoadFiles() {
+    public void LoadFiles()
+    {
         // Loading the questions
-        FileHandler objectHandler = new FileHandler ();
+        FileHandler objectHandler = new FileHandler();
         //setting the read list to the local list
         _entries = objectHandler.ReadFile("What's the file's name to load?");
         // Confirmation message
         Console.WriteLine("You information has been loaded");
         Console.WriteLine();
-     }
+    }
 
-    public void SaveFiles(){
+    public void SaveFiles()
+    {
         //Setting list to save
-        FileHandler objectHandler = new FileHandler ();
+        FileHandler objectHandler = new FileHandler();
         //Saving answers
-        objectHandler.SaveFile("What's the file's name to save?",_entries);
+        objectHandler.SaveFile("What's the file's name to save?", _entries);
         // Confirmation message
         Console.WriteLine("You information has been loaded");
         Console.WriteLine();
     }
 
-    public void Exit(){
+    public void Exit()
+    {
         Console.WriteLine();
         Console.WriteLine("See you Next Time!");
         System.Environment.Exit(1);
     }
 }
+//by Rodrigo Gonzalez//
