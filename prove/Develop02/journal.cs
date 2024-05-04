@@ -62,4 +62,4 @@ public class Journal
         System.Environment.Exit(1);
     }
 }
-//by Rodrigo Gonzalez//
+//by Rodrigo Gonzalez Echegoyen//
